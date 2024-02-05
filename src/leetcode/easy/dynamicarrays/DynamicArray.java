@@ -1,4 +1,4 @@
-package leetcode.arrays;
+package leetcode.easy.dynamicarrays;
 
 public class DynamicArray {
 
