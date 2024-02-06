@@ -34,17 +34,23 @@ public class TwoSum {
     }
 
     private static int[] twoSum(int[] nums, int target) {
+        // Create a map to store the numbers and their indices.
         Map<Integer, Integer> numsMap = new HashMap<>();
 
+        // Iterate over the numbers in the array.
         for (int i = 0; i < nums.length; i++) {
+            // Calculate the complement of the current number.
             int complement = target - nums[i];
 
             if (numsMap.containsKey(complement)) {
+                // If the complement exists in the map, return the indices.
                 return new int[] {numsMap.get(complement), i};
             } else {
+                // Otherwise, add the current number and its index to the map.
                 numsMap.put(nums[i],i);
             }
         }
+        // If no two numbers sum up to the target, return No match found.
         throw new IllegalArgumentException("No match found!");
     }
 
