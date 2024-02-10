@@ -4,6 +4,9 @@ package leetcode.easy.linkedlist;
 import static leetcode.easy.linkedlist.MyLinkedList.*;
 
 /**
+ * Iterative approach
+ * Time Complexity: O(n)
+ * Space Complexity: O(1)
  * Notes: Reverse LinkedList
  * 1. next = current.next
  * 2. current.next = previous;
