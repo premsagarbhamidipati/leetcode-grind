@@ -6,8 +6,8 @@ public class MyLinkedList {
 
     public static class Node {
         Node next;
-        Object data;
-        Node(Object data) {
+        int data;
+        Node(int data) {
             this.data = data;
             next = null;
         }

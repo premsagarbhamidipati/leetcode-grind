@@ -21,9 +21,10 @@ public class PalindromeNumber {
         }
 
         int reversed_int = 0;
+        // iterate half of the number
         while (x > reversed_int) {
-            int pop = x % 10;
-            x = x/10;
+            int pop = x % 10;   //quotient
+            x = x/10;           //reminder
 
             reversed_int = (reversed_int * 10) + pop;
         }

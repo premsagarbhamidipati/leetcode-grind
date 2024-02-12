@@ -60,6 +60,7 @@ public class ReverseLinkedList {
             myLinkedList.head = myLinkedList.head.next;
         }
         System.out.println();
+        // assigning head to null which is last node
         myLinkedList.head = h;
 
     }
