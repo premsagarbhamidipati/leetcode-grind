@@ -20,22 +20,31 @@ public class RemoveDuplicatesFromSortedArray {
         for (int i = 0; i < size; i++) {
             nums[i] = scanner.nextInt();
         }
-        System.out.println(Arrays.toString(removeDuplicates(nums)));
+        System.out.println("Output: "+removeDuplicates(nums));
     }
 
-    private static int[] removeDuplicates(int[] nums) {
+    /**
+     * We will take two pointers i, j
+     * j will traverse each and every element in the array. This is a fast pointer
+     * i will move slowly, this is a slow
+     * @param nums
+     * @return
+     */
+    private static int removeDuplicates(int[] nums) {
 
         // initialize a variable for previous number
-        int lftPntr = 0;
+        int i = 1;
 
-        for (int rtPntr = 1; rtPntr < nums.length; rtPntr++) {
+        for (int j = 1; j < nums.length; j++) {
 
-            if (nums[rtPntr]  != nums[lftPntr]) {
-                lftPntr++;
-                nums[lftPntr] = nums[rtPntr];
+            // if it is a unique element, go inside the loop
+            if (nums[j-1]  != nums[j]) {
+                nums[i] = nums[j];
+                // we move i to next element whenenver we find unique element
+                i++;
             }
         }
-        return nums;
+        return i;
     }
 
 
